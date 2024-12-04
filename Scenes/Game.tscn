@@ -1,0 +1,649 @@
+[gd_scene load_steps=43 format=3 uid="uid://cocxnnpybjth6"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_s1hv5"]
+[ext_resource type="Texture2D" uid="uid://bpjubsujbycr4" path="res://Assets/Power Battery.png" id="2_1f5jo"]
+[ext_resource type="Texture2D" uid="uid://cv333cmm3c34j" path="res://Main rooms/Main Room 0.3.1.png" id="2_d1w6n"]
+[ext_resource type="Texture2D" uid="uid://dnyeoqi37upmj" path="res://Assets/Power Cell.png" id="3_i4dql"]
+[ext_resource type="Texture2D" uid="uid://bqs2hhlqb5fy" path="res://Assets/Button open.png" id="4_bn7nr"]
+[ext_resource type="Texture2D" uid="uid://e2q0pktusyja" path="res://Assets/Button close.png" id="5_nnn6w"]
+[ext_resource type="Texture2D" uid="uid://be7nox5bv5mj2" path="res://Door Animation (1).png" id="8_a70kq"]
+[ext_resource type="Texture2D" uid="uid://3hlfy4eyb63d" path="res://Lamps.png" id="10_4s400"]
+[ext_resource type="Script" path="res://Scripts/buttons.gd" id="11_ji3wc"]
+[ext_resource type="Texture2D" uid="uid://cel0p8pcdpb1b" path="res://Assets/Switch On.png" id="11_nr816"]
+[ext_resource type="Texture2D" uid="uid://m5elunic4nkr" path="res://Assets/Switch Off.png" id="12_vdhmn"]
+[ext_resource type="Texture2D" uid="uid://ctl0bm2277rsy" path="res://Assets/Tablet1.png" id="14_rfqtv"]
+[ext_resource type="Texture2D" uid="uid://b8wtowypqn8qt" path="res://left door anim.png" id="14_sikyg"]
+[ext_resource type="Texture2D" uid="uid://ds1q6og8ua06f" path="res://Assets/Stress Battery.png" id="15_gkdyu"]
+[ext_resource type="Texture2D" uid="uid://bhf1bn3aeru8k" path="res://Assets/Stress Cell.png" id="16_3vovi"]
+[ext_resource type="Script" path="res://Scripts/tablet.gd" id="16_6u7nc"]
+[ext_resource type="Texture2D" uid="uid://dbvoglc11lw3e" path="res://Assets/Map.png" id="17_hl0yc"]
+[ext_resource type="Texture2D" uid="uid://cf8d15jvjmg8p" path="res://Assets/Tablet.png" id="18_fbssp"]
+[ext_resource type="Texture2D" uid="uid://bdx155ejop5ga" path="res://Assets/Ventilation.png" id="21_14ken"]
+
+[sub_resource type="Animation" id="Animation_56xdx"]
+resource_name = "Down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.0666666, 0.1, 0.133333, 0.166667, 0.2, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("indecators/PowerBattery:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("indecators/StressBattery:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_c2drq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("indecators/PowerBattery:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("indecators/StressBattery:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_e12dr"]
+resource_name = "Up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("indecators/PowerBattery:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("indecators/StressBattery:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccf3t"]
+_data = {
+"Down": SubResource("Animation_56xdx"),
+"RESET": SubResource("Animation_c2drq"),
+"Up": SubResource("Animation_e12dr")
+}
+
+[sub_resource type="GDScript" id="GDScript_qr5c5"]
+script/source = "extends TextureButton
+
+@onready var animation_player: AnimationPlayer = $\"../AnimationPlayer\"
+
+func _on_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		animation_player.play(\"Close\")
+	else:
+		animation_player.play(\"Open\")
+"
+
+[sub_resource type="Animation" id="Animation_7hghh"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_67xxe"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_v6gtd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16p71"]
+_data = {
+"Close": SubResource("Animation_7hghh"),
+"Open": SubResource("Animation_67xxe"),
+"RESET": SubResource("Animation_v6gtd")
+}
+
+[sub_resource type="GDScript" id="GDScript_3a3va"]
+
+[sub_resource type="Animation" id="Animation_10dpu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [20]
+}
+
+[sub_resource type="Animation" id="Animation_mjt4a"]
+resource_name = "leftClose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5, 0.533333, 0.566667, 0.6, 0.633333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_6vra6"]
+resource_name = "leftOpen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5, 0.533333, 0.566667, 0.6, 0.633333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bboh2"]
+_data = {
+"RESET": SubResource("Animation_10dpu"),
+"leftClose": SubResource("Animation_mjt4a"),
+"leftOpen": SubResource("Animation_6vra6")
+}
+
+[sub_resource type="Animation" id="Animation_qmpnu"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_mlip2"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_ae8lm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3d2i"]
+_data = {
+"Close": SubResource("Animation_qmpnu"),
+"Open": SubResource("Animation_mlip2"),
+"RESET": SubResource("Animation_ae8lm")
+}
+
+[sub_resource type="GDScript" id="GDScript_kslxt"]
+script/source = "extends TextureButton
+
+@onready var animation_player: AnimationPlayer = $\"../AnimationPlayer\"
+
+func _on_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		animation_player.play(\"Switch On\")
+	else:
+		animation_player.play(\"Switch Off\")
+"
+
+[sub_resource type="Animation" id="Animation_ifh8y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_u3vqk"]
+resource_name = "Switch Off"
+length = 0.036
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_piulm"]
+resource_name = "Switch On"
+length = 0.036
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fv3ou"]
+_data = {
+"RESET": SubResource("Animation_ifh8y"),
+"Switch Off": SubResource("Animation_u3vqk"),
+"Switch On": SubResource("Animation_piulm")
+}
+
+[node name="ONIM" type="Node2D"]
+script = ExtResource("1_s1hv5")
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="Timers"]
+
+[node name="MainTimer" type="Timer" parent="Timers"]
+process_mode = 3
+wait_time = 540.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.4, 2.40001)
+texture = ExtResource("2_d1w6n")
+metadata/_edit_use_anchors_ = true
+
+[node name="tablet" type="Node" parent="."]
+
+[node name="indecators" type="Node" parent="tablet"]
+
+[node name="PowerBattery" type="Sprite2D" parent="tablet/indecators"]
+visible = false
+z_index = 2
+position = Vector2(71, 330)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("2_1f5jo")
+
+[node name="Cell1" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+position = Vector2(0, 10)
+texture = ExtResource("3_i4dql")
+
+[node name="Cell2" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+position = Vector2(2.91667, 10)
+texture = ExtResource("3_i4dql")
+
+[node name="Cell3" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+position = Vector2(5.83333, 10)
+texture = ExtResource("3_i4dql")
+
+[node name="Cell4" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+position = Vector2(8.75, 10)
+texture = ExtResource("3_i4dql")
+
+[node name="Cell5" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+position = Vector2(11.6667, 10)
+texture = ExtResource("3_i4dql")
+
+[node name="StressBattery" type="Sprite2D" parent="tablet/indecators"]
+visible = false
+z_index = 2
+position = Vector2(143, 330)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("15_gkdyu")
+
+[node name="Cell1" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+visible = false
+position = Vector2(-4, 13.0833)
+texture = ExtResource("16_3vovi")
+
+[node name="Cell2" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+visible = false
+position = Vector2(-1.08333, 13.0833)
+texture = ExtResource("16_3vovi")
+
+[node name="Cell3" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+visible = false
+position = Vector2(1.83333, 13.0833)
+texture = ExtResource("16_3vovi")
+
+[node name="Cell4" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+visible = false
+position = Vector2(4.75, 13.0833)
+texture = ExtResource("16_3vovi")
+
+[node name="Cell5" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+visible = false
+position = Vector2(7.66667, 13.0833)
+texture = ExtResource("16_3vovi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tablet"]
+libraries = {
+"": SubResource("AnimationLibrary_ccf3t")
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="tablet"]
+visible = false
+z_index = 2
+position = Vector2(215, 486)
+scale = Vector2(1.97738, 1.75582)
+texture = ExtResource("17_hl0yc")
+
+[node name="Sprite2D" type="Sprite2D" parent="tablet"]
+z_index = 1
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("14_rfqtv")
+hframes = 3
+vframes = 3
+
+[node name="Timer" type="Timer" parent="tablet"]
+wait_time = 0.5
+
+[node name="TextureButton" type="TextureButton" parent="tablet"]
+z_index = 4
+offset_left = 24.0
+offset_top = 597.0
+offset_right = 484.0
+offset_bottom = 637.0
+scale = Vector2(2.40019, 2.44234)
+toggle_mode = true
+texture_normal = ExtResource("18_fbssp")
+script = ExtResource("16_6u7nc")
+
+[node name="Buttons" type="Node" parent="."]
+script = ExtResource("11_ji3wc")
+
+[node name="rightButton" type="Node" parent="Buttons"]
+
+[node name="Button1" type="TextureButton" parent="Buttons/rightButton"]
+offset_left = 627.0
+offset_top = 309.0
+offset_right = 667.0
+offset_bottom = 349.0
+scale = Vector2(2.19608, 2.16129)
+toggle_mode = true
+texture_normal = ExtResource("4_bn7nr")
+texture_pressed = ExtResource("5_nnn6w")
+script = SubResource("GDScript_qr5c5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/rightButton"]
+position = Vector2(576, 324)
+scale = Vector2(2.39984, 2.39981)
+texture = ExtResource("8_a70kq")
+hframes = 4
+vframes = 4
+frame = 15
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Buttons/rightButton"]
+libraries = {
+"": SubResource("AnimationLibrary_16p71")
+}
+
+[node name="leftButton" type="Node" parent="Buttons"]
+
+[node name="Button2" type="TextureButton" parent="Buttons/leftButton"]
+offset_left = -3.0
+offset_top = 277.0
+offset_right = 37.0
+offset_bottom = 317.0
+scale = Vector2(2.1418, 2.03328)
+toggle_mode = true
+texture_normal = ExtResource("4_bn7nr")
+texture_pressed = ExtResource("5_nnn6w")
+script = SubResource("GDScript_3a3va")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/leftButton"]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("14_sikyg")
+hframes = 5
+vframes = 5
+frame = 20
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Buttons/leftButton"]
+libraries = {
+"": SubResource("AnimationLibrary_bboh2")
+}
+
+[node name="Ventilation" type="Node" parent="Buttons"]
+
+[node name="Button3" type="TextureButton" parent="Buttons/Ventilation"]
+offset_left = 1093.0
+offset_top = 276.0
+offset_right = 1133.0
+offset_bottom = 316.0
+scale = Vector2(1.74414, 1.69352)
+toggle_mode = true
+texture_normal = ExtResource("4_bn7nr")
+texture_pressed = ExtResource("5_nnn6w")
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Ventilation"]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("21_14ken")
+hframes = 3
+vframes = 3
+frame = 6
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Buttons/Ventilation"]
+libraries = {
+"": SubResource("AnimationLibrary_i3d2i")
+}
+
+[node name="Lamps" type="Node" parent="Buttons"]
+
+[node name="Button4" type="TextureButton" parent="Buttons/Lamps"]
+offset_left = 589.0
+offset_top = 324.0
+offset_right = 629.0
+offset_bottom = 364.0
+scale = Vector2(0.586848, 1.03032)
+toggle_mode = true
+texture_normal = ExtResource("11_nr816")
+texture_pressed = ExtResource("12_vdhmn")
+stretch_mode = 0
+script = SubResource("GDScript_kslxt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Lamps"]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("10_4s400")
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="Buttons/Lamps"]
+libraries = {
+"": SubResource("AnimationLibrary_fv3ou")
+}
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="toggled" from="tablet/TextureButton" to="tablet/TextureButton" method="_on_toggled"]
+[connection signal="toggled" from="Buttons/rightButton/Button1" to="Buttons" method="_on_button_1_toggled"]
+[connection signal="toggled" from="Buttons/leftButton/Button2" to="Buttons" method="_on_button_2_toggled"]
+[connection signal="toggled" from="Buttons/Ventilation/Button3" to="Buttons" method="_on_button_3_toggled"]
+[connection signal="toggled" from="Buttons/Lamps/Button4" to="Buttons" method="_on_button_4_toggled"]
