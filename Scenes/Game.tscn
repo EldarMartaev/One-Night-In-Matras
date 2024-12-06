@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cocxnnpybjth6"]
+[gd_scene load_steps=76 format=3 uid="uid://cocxnnpybjth6"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_s1hv5"]
 [ext_resource type="Texture2D" uid="uid://bpjubsujbycr4" path="res://Assets/Power Battery.png" id="2_1f5jo"]
@@ -7,25 +7,58 @@
 [ext_resource type="Texture2D" uid="uid://bqs2hhlqb5fy" path="res://Assets/Button open.png" id="4_bn7nr"]
 [ext_resource type="Texture2D" uid="uid://e2q0pktusyja" path="res://Assets/Button close.png" id="5_nnn6w"]
 [ext_resource type="Texture2D" uid="uid://be7nox5bv5mj2" path="res://Door Animation (1).png" id="8_a70kq"]
-[ext_resource type="Texture2D" uid="uid://3hlfy4eyb63d" path="res://Lamps.png" id="10_4s400"]
+[ext_resource type="AudioStream" uid="uid://cttfsesnnlhpt" path="res://Sound Effects/buttonSound.mp3" id="8_vn1ak"]
+[ext_resource type="Script" path="res://Scripts/Cameras.gd" id="8_w5ey3"]
+[ext_resource type="Script" path="res://Scripts/mirases.gd" id="9_ij301"]
+[ext_resource type="Texture2D" uid="uid://tyw282bm725d" path="res://Cameras/Camera3.png" id="9_l4yj7"]
+[ext_resource type="Texture2D" uid="uid://3hlfy4eyb63d" path="res://Assets/Lamps.png" id="10_4s400"]
+[ext_resource type="Texture2D" uid="uid://dl6hfg2rt88cm" path="res://Cameras/Camera4.png" id="10_ic721"]
 [ext_resource type="Script" path="res://Scripts/buttons.gd" id="11_ji3wc"]
+[ext_resource type="Texture2D" uid="uid://jxov7q1l625n" path="res://Miases/camera3_mias1.png" id="11_jv8jq"]
+[ext_resource type="Texture2D" uid="uid://gn5i6o46oaqk" path="res://Cameras/Camera6.png" id="11_mtarr"]
 [ext_resource type="Texture2D" uid="uid://cel0p8pcdpb1b" path="res://Assets/Switch On.png" id="11_nr816"]
+[ext_resource type="Texture2D" uid="uid://bb5f570s1lil4" path="res://Miases/camera3_mias2.png" id="12_cigto"]
+[ext_resource type="Texture2D" uid="uid://dw1d02035vard" path="res://Cameras/Camera5.png" id="12_ivp3q"]
+[ext_resource type="Texture2D" uid="uid://br1yk28lot8an" path="res://Cameras/Camera7.png" id="12_kgiex"]
 [ext_resource type="Texture2D" uid="uid://m5elunic4nkr" path="res://Assets/Switch Off.png" id="12_vdhmn"]
+[ext_resource type="Texture2D" uid="uid://crrhvdt4hmfou" path="res://Cameras/Camera8.png" id="13_frnbk"]
+[ext_resource type="Texture2D" uid="uid://c2js2kfcmg8qf" path="res://Miases/camera4_mias2.png" id="14_3qj7r"]
+[ext_resource type="Texture2D" uid="uid://bgch86vjkbxo3" path="res://Cameras/No signal.png" id="14_n471j"]
 [ext_resource type="Texture2D" uid="uid://ctl0bm2277rsy" path="res://Assets/Tablet1.png" id="14_rfqtv"]
 [ext_resource type="Texture2D" uid="uid://b8wtowypqn8qt" path="res://left door anim.png" id="14_sikyg"]
 [ext_resource type="Texture2D" uid="uid://ds1q6og8ua06f" path="res://Assets/Stress Battery.png" id="15_gkdyu"]
 [ext_resource type="Texture2D" uid="uid://bhf1bn3aeru8k" path="res://Assets/Stress Cell.png" id="16_3vovi"]
 [ext_resource type="Script" path="res://Scripts/tablet.gd" id="16_6u7nc"]
+[ext_resource type="Texture2D" uid="uid://cafj2g3c0vn6l" path="res://Miases/camera5_mias2.png" id="16_cqvrx"]
 [ext_resource type="Texture2D" uid="uid://dbvoglc11lw3e" path="res://Assets/Map.png" id="17_hl0yc"]
 [ext_resource type="Texture2D" uid="uid://cf8d15jvjmg8p" path="res://Assets/Tablet.png" id="18_fbssp"]
+[ext_resource type="Texture2D" uid="uid://daf5go317s4vl" path="res://Miases/camera6_mias3.png" id="18_i4p2j"]
+[ext_resource type="Texture2D" uid="uid://bv6ihl8yxycaa" path="res://Assets/tablet (1).png" id="19_wppb4"]
+[ext_resource type="Texture2D" uid="uid://c033qndycy3d" path="res://Miases/camera7_mias3.png" id="20_ak210"]
+[ext_resource type="Texture2D" uid="uid://bn86bh5qdxopp" path="res://Assets/Time.png" id="20_ffsog"]
 [ext_resource type="Texture2D" uid="uid://bdx155ejop5ga" path="res://Assets/Ventilation.png" id="21_14ken"]
+[ext_resource type="Texture2D" uid="uid://b3mxfg4fgnd0m" path="res://Assets/Numbers.png" id="21_gol87"]
+[ext_resource type="Texture2D" uid="uid://d2fiy4ecgkk0d" path="res://Miases/camera8_mias3.png" id="22_hf880"]
+[ext_resource type="Texture2D" uid="uid://x48ocu23v4kn" path="res://Miases/mainroom_mias1.png" id="30_5nbrk"]
+[ext_resource type="Texture2D" uid="uid://d1vx6o6ber47c" path="res://miasButton.png" id="31_2nk0b"]
+[ext_resource type="Texture2D" uid="uid://rqxlg5mbjqsw" path="res://Miases/mainroom_mias2.png" id="31_f5ic8"]
+[ext_resource type="PackedScene" uid="uid://cqy31qej2vos8" path="res://light.tscn" id="31_gxe7m"]
+[ext_resource type="AudioStream" uid="uid://ydj6k74ts4w4" path="res://Sound Effects/gay-echo.mp3" id="32_miq0b"]
+[ext_resource type="Texture2D" uid="uid://dwp3ih507r6oy" path="res://Miases/mainroom_mias3.png" id="32_mueen"]
+[ext_resource type="Script" path="res://Scripts/light.gd" id="32_oyl3m"]
+[ext_resource type="Texture2D" uid="uid://db8s6rb2hr2bl" path="res://phoneButton.png" id="33_ld0if"]
+[ext_resource type="AudioStream" uid="uid://db2d6wm16p3bs" path="res://Sound Effects/ale.mp3" id="34_d2yb4"]
+[ext_resource type="AudioStream" uid="uid://bv7xkx28cxtdj" path="res://Sound Effects/light-switch-sound-228104.mp3" id="42_g3alx"]
+[ext_resource type="AudioStream" uid="uid://mnawi0te0a03" path="res://Sound Effects/openDoor.mp3" id="46_kd7ce"]
+[ext_resource type="AudioStream" uid="uid://ddnj1rsmycfbv" path="res://Sound Effects/closeDoor.mp3" id="47_upr1k"]
+[ext_resource type="AudioStream" uid="uid://dg4aolrejroca" path="res://Sound Effects/mainMusic.mp3" id="51_1wui3"]
 
 [sub_resource type="Animation" id="Animation_56xdx"]
 resource_name = "Down"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("tablet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,7 +70,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/path = NodePath("map:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -65,6 +98,42 @@ tracks/3/path = NodePath("indecators/StressBattery:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("anotherTablet:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Time:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Temp:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -76,7 +145,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("tablet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -88,7 +157,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/path = NodePath("map:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -116,6 +185,42 @@ tracks/3/path = NodePath("indecators/StressBattery:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("anotherTablet:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Time:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Temp:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -127,7 +232,7 @@ resource_name = "Up"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("tablet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -139,7 +244,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/path = NodePath("map:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -167,6 +272,42 @@ tracks/3/path = NodePath("indecators/StressBattery:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("anotherTablet:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Time:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Temp:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.366667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -356,7 +497,7 @@ script/source = "extends TextureButton
 @onready var animation_player: AnimationPlayer = $\"../AnimationPlayer\"
 
 func _on_toggled(toggled_on: bool) -> void:
-	if toggled_on == true:
+	if toggled_on == false:
 		animation_player.play(\"Switch On\")
 	else:
 		animation_player.play(\"Switch Off\")
@@ -419,108 +560,258 @@ _data = {
 [node name="ONIM" type="Node2D"]
 script = ExtResource("1_s1hv5")
 
-[node name="Timers" type="Node" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="Timers"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MainTimer" type="Timer" parent="Timers"]
-process_mode = 3
-wait_time = 540.0
+[node name="tablet" type="Node" parent="CanvasLayer"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(2.4, 2.40001)
-texture = ExtResource("2_d1w6n")
-metadata/_edit_use_anchors_ = true
+[node name="indecators" type="Node" parent="CanvasLayer/tablet"]
 
-[node name="tablet" type="Node" parent="."]
-
-[node name="indecators" type="Node" parent="tablet"]
-
-[node name="PowerBattery" type="Sprite2D" parent="tablet/indecators"]
+[node name="PowerBattery" type="Sprite2D" parent="CanvasLayer/tablet/indecators"]
 visible = false
 z_index = 2
-position = Vector2(71, 330)
+position = Vector2(93.4, 259.4)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_1f5jo")
 
-[node name="Cell1" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+[node name="Cell1" type="Sprite2D" parent="CanvasLayer/tablet/indecators/PowerBattery"]
 position = Vector2(0, 10)
 texture = ExtResource("3_i4dql")
 
-[node name="Cell2" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+[node name="Cell2" type="Sprite2D" parent="CanvasLayer/tablet/indecators/PowerBattery"]
 position = Vector2(2.91667, 10)
 texture = ExtResource("3_i4dql")
 
-[node name="Cell3" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+[node name="Cell3" type="Sprite2D" parent="CanvasLayer/tablet/indecators/PowerBattery"]
 position = Vector2(5.83333, 10)
 texture = ExtResource("3_i4dql")
 
-[node name="Cell4" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+[node name="Cell4" type="Sprite2D" parent="CanvasLayer/tablet/indecators/PowerBattery"]
 position = Vector2(8.75, 10)
 texture = ExtResource("3_i4dql")
 
-[node name="Cell5" type="Sprite2D" parent="tablet/indecators/PowerBattery"]
+[node name="Cell5" type="Sprite2D" parent="CanvasLayer/tablet/indecators/PowerBattery"]
 position = Vector2(11.6667, 10)
 texture = ExtResource("3_i4dql")
 
-[node name="StressBattery" type="Sprite2D" parent="tablet/indecators"]
+[node name="StressBattery" type="Sprite2D" parent="CanvasLayer/tablet/indecators"]
 visible = false
 z_index = 2
-position = Vector2(143, 330)
+position = Vector2(165.4, 259.4)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("15_gkdyu")
 
-[node name="Cell1" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+[node name="Cell1" type="Sprite2D" parent="CanvasLayer/tablet/indecators/StressBattery"]
 visible = false
 position = Vector2(-4, 13.0833)
 texture = ExtResource("16_3vovi")
 
-[node name="Cell2" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+[node name="Cell2" type="Sprite2D" parent="CanvasLayer/tablet/indecators/StressBattery"]
 visible = false
 position = Vector2(-1.08333, 13.0833)
 texture = ExtResource("16_3vovi")
 
-[node name="Cell3" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+[node name="Cell3" type="Sprite2D" parent="CanvasLayer/tablet/indecators/StressBattery"]
 visible = false
 position = Vector2(1.83333, 13.0833)
 texture = ExtResource("16_3vovi")
 
-[node name="Cell4" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+[node name="Cell4" type="Sprite2D" parent="CanvasLayer/tablet/indecators/StressBattery"]
 visible = false
 position = Vector2(4.75, 13.0833)
 texture = ExtResource("16_3vovi")
 
-[node name="Cell5" type="Sprite2D" parent="tablet/indecators/StressBattery"]
+[node name="Cell5" type="Sprite2D" parent="CanvasLayer/tablet/indecators/StressBattery"]
 visible = false
 position = Vector2(7.66667, 13.0833)
 texture = ExtResource("16_3vovi")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="tablet"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/tablet"]
 libraries = {
 "": SubResource("AnimationLibrary_ccf3t")
 }
 
-[node name="Sprite2D2" type="Sprite2D" parent="tablet"]
+[node name="map" type="Sprite2D" parent="CanvasLayer/tablet"]
 visible = false
 z_index = 2
-position = Vector2(215, 486)
-scale = Vector2(1.97738, 1.75582)
+position = Vector2(277, 445)
+scale = Vector2(2.4, 2.131)
 texture = ExtResource("17_hl0yc")
+script = ExtResource("8_w5ey3")
 
-[node name="Sprite2D" type="Sprite2D" parent="tablet"]
+[node name="Button1" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = -52.5948
+offset_top = -57.523
+offset_right = -44.5948
+offset_bottom = -49.523
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = -81.4209
+offset_top = 46.7018
+offset_right = -73.4209
+offset_bottom = 54.7018
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button3" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = -36.4118
+offset_top = -57.523
+offset_right = -28.4118
+offset_bottom = -49.523
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button4" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = -26.2974
+offset_top = 46.1323
+offset_right = -18.2974
+offset_bottom = 54.1323
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button5" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = 32.366
+offset_top = -57.523
+offset_right = 40.366
+offset_bottom = -49.523
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button6" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = 74.3408
+offset_top = -39.2979
+offset_right = 82.3408
+offset_bottom = -31.2979
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button7" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = 74.3408
+offset_top = -22.2118
+offset_right = 82.3408
+offset_bottom = -14.2118
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="Button8" type="Button" parent="CanvasLayer/tablet/map"]
+offset_left = 73.8351
+offset_top = 3.98673
+offset_right = 81.8351
+offset_bottom = 11.9867
+scale = Vector2(1.63734, 1.37528)
+toggle_mode = true
+
+[node name="buttonSound" type="AudioStreamPlayer2D" parent="CanvasLayer/tablet/map"]
+stream = ExtResource("8_vn1ak")
+volume_db = 2.811
+
+[node name="tablet" type="Sprite2D" parent="CanvasLayer/tablet"]
 z_index = 1
 position = Vector2(576, 324)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("14_rfqtv")
 hframes = 3
 vframes = 3
+script = ExtResource("9_ij301")
 
-[node name="Timer" type="Timer" parent="tablet"]
+[node name="Timers" type="Node" parent="CanvasLayer/tablet/tablet"]
+
+[node name="Timer1" type="Timer" parent="CanvasLayer/tablet/tablet/Timers"]
+wait_time = 17.0
+
+[node name="Timer2" type="Timer" parent="CanvasLayer/tablet/tablet/Timers"]
+wait_time = 20.0
+
+[node name="Timer3" type="Timer" parent="CanvasLayer/tablet/tablet/Timers"]
+wait_time = 13.0
+
+[node name="Camera3" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("9_l4yj7")
+hframes = 3
+
+[node name="miras1" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera3"]
+visible = false
+texture = ExtResource("11_jv8jq")
+hframes = 2
+
+[node name="miras2" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera3"]
+visible = false
+texture = ExtResource("12_cigto")
+
+[node name="Camera4" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("10_ic721")
+
+[node name="miras2" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera4"]
+visible = false
+texture = ExtResource("14_3qj7r")
+hframes = 2
+
+[node name="Camera5" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("12_ivp3q")
+
+[node name="miras2" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera5"]
+visible = false
+texture = ExtResource("16_cqvrx")
+
+[node name="Camera6" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("11_mtarr")
+hframes = 2
+frame = 1
+
+[node name="miras3" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera6"]
+visible = false
+position = Vector2(-5.08626e-05, 10.4167)
+texture = ExtResource("18_i4p2j")
+hframes = 2
+
+[node name="Camera7" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("12_kgiex")
+
+[node name="miras3" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera7"]
+visible = false
+texture = ExtResource("20_ak210")
+hframes = 2
+
+[node name="Camera8" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+z_index = 1
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("13_frnbk")
+
+[node name="miras3" type="Sprite2D" parent="CanvasLayer/tablet/tablet/Camera8"]
+texture = ExtResource("22_hf880")
+hframes = 2
+frame = 1
+
+[node name="NoSignal" type="Sprite2D" parent="CanvasLayer/tablet/tablet"]
+visible = false
+position = Vector2(87.9167, 5.83335)
+texture = ExtResource("14_n471j")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/tablet"]
 wait_time = 0.5
 
-[node name="TextureButton" type="TextureButton" parent="tablet"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/tablet"]
 z_index = 4
 offset_left = 24.0
 offset_top = 597.0
@@ -530,6 +821,94 @@ scale = Vector2(2.40019, 2.44234)
 toggle_mode = true
 texture_normal = ExtResource("18_fbssp")
 script = ExtResource("16_6u7nc")
+
+[node name="anotherTablet" type="Sprite2D" parent="CanvasLayer/tablet"]
+visible = false
+z_index = 1
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("19_wppb4")
+
+[node name="Time" type="Sprite2D" parent="CanvasLayer/tablet"]
+visible = false
+
+[node name="AmPm" type="Sprite2D" parent="CanvasLayer/tablet/Time"]
+z_index = 1
+position = Vector2(260.6, 88.4)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("20_ffsog")
+hframes = 2
+
+[node name="firstNumber" type="Sprite2D" parent="CanvasLayer/tablet/Time"]
+z_index = 1
+position = Vector2(178.6, 67.4)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("21_gol87")
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="secondNumber" type="Sprite2D" parent="CanvasLayer/tablet/Time"]
+z_index = 1
+position = Vector2(200.6, 67.4)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("21_gol87")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="Temp" type="Sprite2D" parent="CanvasLayer/tablet"]
+visible = false
+
+[node name="first" type="Sprite2D" parent="CanvasLayer/tablet/Temp"]
+z_index = 1
+position = Vector2(178.6, 105.8)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("21_gol87")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="second" type="Sprite2D" parent="CanvasLayer/tablet/Temp"]
+z_index = 1
+position = Vector2(200.6, 105.8)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("21_gol87")
+hframes = 4
+vframes = 3
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="Timers"]
+
+[node name="MainTimer" type="Timer" parent="Timers"]
+process_mode = 3
+wait_time = 90.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.4, 2.40001)
+texture = ExtResource("2_d1w6n")
+metadata/_edit_use_anchors_ = true
+
+[node name="mias1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("30_5nbrk")
+
+[node name="mias2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("31_f5ic8")
+
+[node name="mias3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("32_mueen")
 
 [node name="Buttons" type="Node" parent="."]
 script = ExtResource("11_ji3wc")
@@ -641,9 +1020,84 @@ libraries = {
 "": SubResource("AnimationLibrary_fv3ou")
 }
 
+[node name="lightSwitch" type="AudioStreamPlayer2D" parent="Buttons/Lamps"]
+stream = ExtResource("42_g3alx")
+volume_db = 5.261
+
+[node name="MiasButton" type="Node" parent="Buttons"]
+
+[node name="TextureButton" type="TextureButton" parent="Buttons/MiasButton"]
+offset_left = 422.0
+offset_top = 273.0
+offset_right = 462.0
+offset_bottom = 313.0
+scale = Vector2(2.12853, 1.99456)
+texture_normal = ExtResource("31_2nk0b")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Buttons/MiasButton"]
+position = Vector2(463, 309)
+stream = ExtResource("32_miq0b")
+
+[node name="phoneButton" type="Node" parent="Buttons"]
+
+[node name="phone" type="TextureButton" parent="Buttons/phoneButton"]
+offset_left = 487.0
+offset_top = 353.0
+offset_right = 527.0
+offset_bottom = 393.0
+scale = Vector2(1.50475, 1.07436)
+texture_normal = ExtResource("33_ld0if")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Buttons/phoneButton"]
+stream = ExtResource("34_d2yb4")
+volume_db = 5.0
+
+[node name="Opening" type="AudioStreamPlayer2D" parent="Buttons"]
+stream = ExtResource("46_kd7ce")
+
+[node name="Closing" type="AudioStreamPlayer2D" parent="Buttons"]
+stream = ExtResource("47_upr1k")
+
+[node name="Light" parent="." instance=ExtResource("31_gxe7m")]
+visible = false
+position = Vector2(119, 119)
+scale = Vector2(1.5552, 1.5552)
+energy = 1.5
+range_z_min = 0
+range_z_max = 0
+shadow_color = Color(0, 0, 0, 1)
+texture_scale = 2.4
+height = 9.0
+script = ExtResource("32_oyl3m")
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("51_1wui3")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="toggled" from="tablet/TextureButton" to="tablet/TextureButton" method="_on_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button1" to="CanvasLayer/tablet/map" method="_on_button_1_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button2" to="CanvasLayer/tablet/map" method="_on_button_2_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button3" to="CanvasLayer/tablet/map" method="_on_button_3_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button4" to="CanvasLayer/tablet/map" method="_on_button_4_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button5" to="CanvasLayer/tablet/map" method="_on_button_5_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button6" to="CanvasLayer/tablet/map" method="_on_button_6_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button7" to="CanvasLayer/tablet/map" method="_on_button_7_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/map/Button8" to="CanvasLayer/tablet/map" method="_on_button_8_toggled"]
+[connection signal="toggled" from="CanvasLayer/tablet/TextureButton" to="CanvasLayer/tablet/map" method="_on_texture_button_toggled"]
+[connection signal="ready" from="Buttons" to="Buttons" method="_on_ready"]
+[connection signal="toggled" from="Buttons/rightButton/Button1" to="." method="_on_button_1_toggled"]
+[connection signal="toggled" from="Buttons/rightButton/Button1" to="CanvasLayer/tablet/tablet" method="_on_button_1_toggled"]
 [connection signal="toggled" from="Buttons/rightButton/Button1" to="Buttons" method="_on_button_1_toggled"]
+[connection signal="toggled" from="Buttons/leftButton/Button2" to="." method="_on_button_2_toggled"]
+[connection signal="toggled" from="Buttons/leftButton/Button2" to="CanvasLayer/tablet/tablet" method="_on_button_2_toggled"]
 [connection signal="toggled" from="Buttons/leftButton/Button2" to="Buttons" method="_on_button_2_toggled"]
+[connection signal="toggled" from="Buttons/Ventilation/Button3" to="." method="_on_button_3_toggled"]
+[connection signal="toggled" from="Buttons/Ventilation/Button3" to="CanvasLayer/tablet/tablet" method="_on_button_3_toggled"]
 [connection signal="toggled" from="Buttons/Ventilation/Button3" to="Buttons" method="_on_button_3_toggled"]
+[connection signal="ready" from="Buttons/Lamps" to="Buttons/Lamps/Button4" method="_on_lamps_ready"]
+[connection signal="toggled" from="Buttons/Lamps/Button4" to="." method="_on_button_4_toggled"]
+[connection signal="toggled" from="Buttons/Lamps/Button4" to="CanvasLayer/tablet/tablet" method="_on_button_4_toggled"]
 [connection signal="toggled" from="Buttons/Lamps/Button4" to="Buttons" method="_on_button_4_toggled"]
+[connection signal="button_down" from="Buttons/MiasButton/TextureButton" to="Buttons" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Buttons/phoneButton/phone" to="Buttons" method="_on_phone_button_down"]

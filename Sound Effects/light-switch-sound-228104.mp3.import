@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv7xkx28cxtdj"
+path="res://.godot/imported/light-switch-sound-228104.mp3-86586b405d5e5e9d9bf1ede05e8bcc0a.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/light-switch-sound-228104.mp3"
+dest_files=["res://.godot/imported/light-switch-sound-228104.mp3-86586b405d5e5e9d9bf1ede05e8bcc0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

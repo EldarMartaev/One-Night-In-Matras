@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db2d6wm16p3bs"
+path="res://.godot/imported/ale.mp3-dcaff90413e1567f3ed1f3ce04830ab1.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/ale.mp3"
+dest_files=["res://.godot/imported/ale.mp3-dcaff90413e1567f3ed1f3ce04830ab1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

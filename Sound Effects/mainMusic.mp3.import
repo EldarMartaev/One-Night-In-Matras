@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg4aolrejroca"
+path="res://.godot/imported/mainMusic.mp3-a6e4d4da0ea1da9dc77f0403c2c1b9be.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/mainMusic.mp3"
+dest_files=["res://.godot/imported/mainMusic.mp3-a6e4d4da0ea1da9dc77f0403c2c1b9be.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ydj6k74ts4w4"
+path="res://.godot/imported/gay-echo.mp3-de64d35a98bed8ca4cb18450dd030047.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/gay-echo.mp3"
+dest_files=["res://.godot/imported/gay-echo.mp3-de64d35a98bed8ca4cb18450dd030047.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
